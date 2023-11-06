@@ -10,7 +10,7 @@ export default function Cinema() {
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
-          <Carla rotation={[0, Math.PI - 0.4, 0]} position={[-1.2, 0, 0.6]} scale={[0.26, 0.26, 0.26]} />
+          <Samurai rotation={[0, Math.PI - 0.4, 0]} position={[-3, 0, 2]} scale={[1, 1, 1]} />
           <VideoText position={[0, 1.3, -2]} />
           <Ground />
         </group>
@@ -23,8 +23,8 @@ export default function Cinema() {
   )
 }
 
-function Carla(props:any) {
-  const { scene } = useGLTF('/carla-draco.glb')
+function Samurai(props:any) {
+  const { scene } = useGLTF('/scene.gltf')
   return <primitive object={scene} {...props} />
 }
 
@@ -32,8 +32,8 @@ function VideoText(props: any) {
   const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/drei.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }))
   useEffect(() => void video.play(), [video])
   return (
-    <Text font="/Inter-Bold.woff" fontSize={3} letterSpacing={-0.06} {...props}>
-      drei
+    <Text font="/Inter-Bold.woff" fontSize={2} letterSpacing={-0.06} {...props}>
+      Karasu
       <meshBasicMaterial toneMapped={false}>
         <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
       </meshBasicMaterial>
