@@ -10,13 +10,13 @@ export default function Cinema() {
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
-          <Samurai rotation={[0, Math.PI - 0.4, 0]} position={[-3, 0, 2]} scale={[1, 1, 1]} />
+          <Samurai rotation={[0, Math.PI - 0.70, 0]} position={[-1, 0, 2]} scale={[1, 1, 1]} />
           <VideoText position={[0, 1.3, -2]} />
           <Ground />
         </group>
         <ambientLight intensity={0.5} />
-        <spotLight position={[0, 10, 0]} intensity={0.3} />
-        <directionalLight position={[-50, 0, -40]} intensity={0.7} />
+        <spotLight position={[12, 10, 0]} intensity={0.3} />
+        <directionalLight position={[50, 0, -40]} intensity={0.7} />
         <Intro />
       </Suspense>
     </Canvas>
@@ -29,7 +29,7 @@ function Samurai(props:any) {
 }
 
 function VideoText(props: any) {
-  const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/drei.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }))
+  const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }))
   useEffect(() => void video.play(), [video])
   return (
     <Text font="/Inter-Bold.woff" fontSize={2} letterSpacing={-0.06} {...props}>
