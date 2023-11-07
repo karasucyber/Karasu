@@ -23,9 +23,14 @@ export default function Cinema() {
   )
 }
 
+
+
+
 function Samurai(props:any) {
+  const colotTexture = useTexture('Robe2_normal.jpeg')
   const { scene } = useGLTF('/scene.gltf')
-  return <primitive object={scene} {...props} />
+  return <primitive object={scene} map={colotTexture} {...props} />
+  
 }
 
 function VideoText(props: any) {
