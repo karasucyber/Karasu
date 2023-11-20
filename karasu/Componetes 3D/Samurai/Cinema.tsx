@@ -12,6 +12,7 @@ export default function Cinema() {
         <group position={[0, -1, 0]}>
           <Samurai rotation={[0, Math.PI - 0.70, 0]} position={[-1, 0, 2]} scale={[1, 1, 1]} />
           <VideoText position={[0, 1.3, -2]} />
+          <Ground/>
         </group>
         <ambientLight intensity={0.5} />
         <spotLight position={[12, 10, 0]} intensity={0.3} />
@@ -42,14 +43,33 @@ function VideoText(props: any) {
   )
 }
 
-/*function Ground() {
-  const [floor, normal] = useTexture(['/SurfaceImperfections003_1K_var1.jpg', '/SurfaceImperfections003_1K_Normal.jpg'])
+function Ground() {
+  const [floor, normal] = useTexture(['/SurfaceImperfections003_1K_var1.jpg', '/SurfaceImperfections003_1K_Normal.jpg']);
+
   return (
-    <Reflector blur={[400, 100]} resolution={512} args={[10, 10]} mirror={0.5} mixBlur={6} mixStrength={1.5} rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
-      {(Material, props) => <Material color="#a0a0a0" metalness={0.4} roughnessMap={floor} normalMap={normal} normalScale={[2, 2]} {...props} />}
+    <Reflector
+      blur={[400, 100]}
+      resolution={512}
+      args={[10, 10]}
+      mirror={0.5}
+      mixBlur={6}
+      mixStrength={1.5}
+      rotation={[-Math.PI / 2, 0, Math.PI / 2]}
+    >
+      {(Material: React.ElementType, props: any) => (
+        <Material
+          color="#a0a0a0"
+          metalness={0.4}
+          roughnessMap={floor}
+          normalMap={normal}
+          normalScale={[2, 2]}
+          {...props}
+        />
+      )}
     </Reflector>
-  )
-}*/
+  );
+}
+
 
 function Intro() {
   const [vec] = useState(() => new THREE.Vector3())
