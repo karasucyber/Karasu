@@ -42,7 +42,6 @@ function VideoText(props: any) {
 }
 function Ground() {
   const [floor, normal] = useTexture(['/LowSet1_baseColor.png', '/LowSet1_baseColor.png']);
-
   return (
     <Reflector
       blur={[400, 100]}
