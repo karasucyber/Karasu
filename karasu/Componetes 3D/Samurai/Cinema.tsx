@@ -10,7 +10,7 @@ export default function Cinema() {
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
-          <Samurai rotation={[0, Math.PI -3.6, 0]} position={[-1, 0, 1]} scale={[1, 1, 1]} />
+          <Corvo rotation={[0, Math.PI -3.6, 0]} position={[-1, 0, 1]} scale={[0.1, 0.1, 0.1]} />
           <VideoText position={[0, 1.3, -2]} />
           <Ground/>
         </group>
@@ -22,9 +22,9 @@ export default function Cinema() {
     </Canvas>
   )
 }
-function Samurai(props:any) {
-  const colotTexture = useTexture('/LowSet3_baseColor.png')
-  const { scene } = useGLTF('/Samurai.gltf')
+function Corvo(props:any) {
+  const colotTexture = useTexture('/gradient_baseColor.jpeg')
+  const { scene } = useGLTF('/corvo.gltf')
   return <primitive object={scene} map={colotTexture} {...props} />
   
 }
@@ -41,7 +41,7 @@ function VideoText(props: any) {
   )
 }
 function Ground() {
-  const [floor, normal] = useTexture(['/LowSet2_baseColor.png', '/SurfaceImperfections003_1K_Normal.jpg']);
+  const [floor, normal] = useTexture(['/LowSet1_baseColor.png', '/LowSet1_baseColor.png']);
 
   return (
     <Reflector
