@@ -59,7 +59,7 @@ function Ground() {
           roughnessMap={floor}
           normalMap={normal}
           normalScale={[2, 2]}
-          {...props}
+          {...props} 
         />
       )}
     </Reflector>
