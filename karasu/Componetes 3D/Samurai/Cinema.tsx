@@ -38,7 +38,7 @@ function Corvo(props:any) {
 
 function VideoText(props: any) {
   const { size } = useThree(); // Import useThree from react-three-fiber
-  const responsiveFontSize = size.width > 600 ? 2 : 1; // Adjust the font size based on screen width
+  const responsiveFontSize = size.width > 600 ? 2 : 0.95; // Adjust the font size based on screen width
   const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }));
 
   useEffect(() => {
