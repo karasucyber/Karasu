@@ -1,8 +1,13 @@
 import * as THREE from 'three'
 import React, { Suspense, useEffect, useState } from 'react'
-import { Canvas, useFrame } from '@react-three/fiber'
+import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Reflector, Text, useTexture, useGLTF } from '@react-three/drei'
 import "./styles.css"
+
+// Remove the following import lines
+// import { Text, useThree } from 'react-three-fiber';
+// import { videoTexture, sRGBEncoding, meshBasicMaterial } from 'three';
+
 export default function Cinema() {
   return (
     <Canvas  gl={{ alpha: false }} camera={{ position: [0, 3, 100], fov: 15 }}>
@@ -28,18 +33,28 @@ function Corvo(props:any) {
   return <primitive object={scene} map={colotTexture} {...props} />
   
 }
+
+
+
 function VideoText(props: any) {
-  const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }))
-  useEffect(() => void video.play(), [video])
+  const { size } = useThree(); // Import useThree from react-three-fiber
+  const responsiveFontSize = size.width > 600 ? 2 : 1; // Adjust the font size based on screen width
+  const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }));
+
+  useEffect(() => {
+    void video.play();
+  }, [video]);
+
   return (
-    <Text font="/Inter-Bold.woff" fontSize={2} letterSpacing={-0.06} {...props}>
+    <Text font="/Inter-Bold.woff" fontSize={responsiveFontSize} letterSpacing={-0.06} {...props}>
       Karasu
       <meshBasicMaterial toneMapped={false}>
         <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
       </meshBasicMaterial>
     </Text>
-  )
+  );
 }
+
 function Ground() {
   const [floor, normal] = useTexture(['/LowSet1_baseColor.png', '/LowSet1_baseColor.png']);
   return (
