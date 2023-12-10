@@ -14,13 +14,16 @@ const Container = styled.div({
   justifyContent: 'space-between',
   alignItems: 'flex-end',
   flexDirection: 'row',
-  lineHeight: '1.5em',
   zIndex: '9999',
 });
 
 const ContainerLeft = styled.div({
   color: 'white',
   padding: '10px',
+  width: '15%',
+  backgroundColor: 'rgba(0, 0, 0, 0.3)',
+  boxShadow: '2px 2px 5px rgba(60, 50, 2, 0.2), -2px -2px 5px rgba(0, 0, 0, 1)', 
+  borderColor: 'transparent',
 });
 
 const ContainerRight = styled.div({
@@ -31,9 +34,8 @@ const ContainerRight = styled.div({
 });
 
 const Link = styled.a({
-  fontsize: "12px",
+  fontsize: "15px",
   color: "white",
-  padding: '10px'
 });
 
 const ContainerIcons = styled.button({
@@ -45,23 +47,30 @@ const ContainerIcons = styled.button({
   border:"none",
 });
 
-// Estilizando os ícones clicáveis
 const ClickableIcon = styled.a`
   color: white;
   text-decoration: none;
+
   &:hover {
-    color: #CCCCCC; /* Adicione uma cor de destaque ao passar o mouse se desejar */
-  }
+    color: #CCCCCC; 
 `;
 
 const Footer = () => {
   return (
     <>
       <Container>
-        <ContainerLeft>
-          <Link> Home </Link>
+      <ContainerLeft>
+        <ClickableIcon> Dev </ClickableIcon>
+          <p> Você Dev que deseja se aprofuncar no mundo linux e rust </p>
         </ContainerLeft>
-
+        <ContainerLeft>
+        <ClickableIcon > Clientes </ClickableIcon>
+          <p> Você deseja fazer um site ou um aplicativo click no icon a cima</p>
+        </ContainerLeft>
+        <ContainerLeft>
+        <ClickableIcon> Recrutadores </ClickableIcon>
+          <p> Para você Recrutadores que deseja ver meus projetos e minhas certificações</p>
+        </ContainerLeft>
         <ContainerRight>
           <ContainerIcons>
             <ClickableIcon href="https://www.instagram.com/karasucyber/">

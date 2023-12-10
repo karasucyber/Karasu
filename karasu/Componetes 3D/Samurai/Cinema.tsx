@@ -3,11 +3,9 @@ import React, { Suspense, useEffect, useState } from 'react'
 import { Canvas, useFrame, useThree } from '@react-three/fiber'
 import { Reflector, Text, useTexture, useGLTF } from '@react-three/drei'
 import "./styles.css"
-
 // Remove the following import lines
 // import { Text, useThree } from 'react-three-fiber';
 // import { videoTexture, sRGBEncoding, meshBasicMaterial } from 'three';
-
 export default function Cinema() {
   return (
     <Canvas  gl={{ alpha: false }} camera={{ position: [0, 3, 100], fov: 15 }}>
@@ -15,7 +13,7 @@ export default function Cinema() {
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
-          <Corvo rotation={[0, Math.PI -3.6, 0]} position={[-0.1, 0, 1]} scale={[0.1, 0.1, 0.1]} />
+          <Corvo rotation={[0, Math.PI -3.6, 0]} position={[-0.1, 0, 1]} scale={[0.1, 0.080, 0.1]} />
           <VideoText position={[0, 1.3, -2]} />
           <Ground/>
         </group>
@@ -24,17 +22,12 @@ export default function Cinema() {
         <directionalLight position={[60, 100, -40]} intensity={0.4} />
         <Intro />
       </Suspense>
-    </Canvas>
-  )
-}
+    </Canvas>)}
+
 function Corvo(props:any) {
   const colotTexture = useTexture('/gradient_baseColor.jpeg')
   const { scene } = useGLTF('/corvo.gltf')
-  return <primitive object={scene} map={colotTexture} {...props} />
-  
-}
-
-
+  return <primitive object={scene} map={colotTexture} {...props} />}
 
 function VideoText(props: any) {
   const { size } = useThree(); // Import useThree from react-three-fiber
@@ -44,17 +37,14 @@ function VideoText(props: any) {
   useEffect(() => {
     void video.play();
   }, [video]);
-
   return (
     <Text font="/Inter-Bold.woff" fontSize={responsiveFontSize} letterSpacing={-0.06} {...props}>
       Karasu
       <meshBasicMaterial toneMapped={false}>
         <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
       </meshBasicMaterial>
-    </Text>
-  );
-}
-
+    </Text>);}
+    
 function Ground() {
   const [floor, normal] = useTexture(['/LowSet1_baseColor.png', '/LowSet1_baseColor.png']);
   return (
@@ -65,8 +55,8 @@ function Ground() {
       mirror={0.5}
       mixBlur={6}
       mixStrength={1.5}
-      rotation={[-Math.PI / 2, 0, Math.PI / 2]}
-    >
+      rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
+        
       {(Material: React.ElementType, props: any) => (
         <Material
           color="#a0a0a0"
