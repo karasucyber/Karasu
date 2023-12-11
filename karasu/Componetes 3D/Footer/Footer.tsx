@@ -4,26 +4,34 @@ import { FaWhatsapp } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
 
-const Container = styled.div({
-  position: 'fixed',
-  bottom: '0',
-  left: '0',
-  width: '95%',
-  display: 'flex',
-  padding: '5px',
-  justifyContent: 'space-between',
-  alignItems: 'flex-end',
-  flexDirection: 'row',
-  zIndex: '9999',
-});
+const Container = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 95%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  z-index: 9999;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+`;
 
 const ContainerLeft = styled.div({
   color: 'white',
   padding: '10px',
-  width: '15%',
+  width: '100%',
   backgroundColor: 'rgba(0, 0, 0, 0.3)',
   boxShadow: '2px 2px 5px rgba(60, 50, 2, 0.2), -2px -2px 5px rgba(0, 0, 0, 1)', 
   borderColor: 'transparent',
+  fontSize: '20px',
+  
 });
 
 const ContainerRight = styled.div({
@@ -31,12 +39,9 @@ const ContainerRight = styled.div({
   display: "flex",
   justifyContent: 'center',
   flexDirection: 'column',
+  width: "100%"
 });
 
-const Link = styled.a({
-  fontsize: "15px",
-  color: "white",
-});
 
 const ContainerIcons = styled.button({
   padding:"10px",
@@ -50,26 +55,43 @@ const ContainerIcons = styled.button({
 const ClickableIcon = styled.a`
   color: white;
   text-decoration: none;
-
   &:hover {
     color: #CCCCCC; 
 `;
+
+
+const ClickableIcon1 = styled.a`
+  color: white;
+  text-decoration: none;
+  &:hover {
+    color: #CCCCCC; 
+`;
+
+const Paragrafo = styled.div({
+  fontSize: "15px",
+  padding: "10px"
+})
+
+const ContainerTitulo = styled.div({
+  padding: '10px'
+})
+
 
 const Footer = () => {
   return (
     <>
       <Container>
       <ContainerLeft>
-        <ClickableIcon> Dev </ClickableIcon>
-          <p> Você Dev que deseja se aprofuncar no mundo linux e rust </p>
+        <ContainerTitulo><ClickableIcon1>Dev</ClickableIcon1></ContainerTitulo>
+          <Paragrafo>Você Dev que deseja se aprofuncar no mundo linux e rust </Paragrafo>
         </ContainerLeft>
         <ContainerLeft>
-        <ClickableIcon > Clientes </ClickableIcon>
-          <p> Você deseja fazer um site ou um aplicativo click no icon a cima</p>
+        <ContainerTitulo><ClickableIcon1>Clientes</ClickableIcon1></ContainerTitulo>
+          <Paragrafo> Você deseja fazer um site ou um aplicativo click no icon a cima</Paragrafo>
         </ContainerLeft>
         <ContainerLeft>
-        <ClickableIcon> Recrutadores </ClickableIcon>
-          <p> Para você Recrutadores que deseja ver meus projetos e minhas certificações</p>
+        <ContainerTitulo><ClickableIcon1>Recrutores</ClickableIcon1></ContainerTitulo>
+        <Paragrafo> Para você Recrutadores que deseja ver meus projetos e minhas certificações</Paragrafo>
         </ContainerLeft>
         <ContainerRight>
           <ContainerIcons>
