@@ -25,13 +25,13 @@ export default function Cinema() {
     </Canvas>)}
 
 function Corvo(props:any) {
-  const colotTexture = useTexture('/gradient_baseColor.jpeg')
+  const colotTexture = useTexture('/MAT_Crow_baseColor.png')
   const { scene } = useGLTF('/corvo.gltf')
   return <primitive object={scene} map={colotTexture} {...props} />}
 
 function VideoText(props: any) {
   const { size } = useThree(); // Import useThree from react-three-fiber
-  const responsiveFontSize = size.width > 780 ? 2 : 1; // Adjust the font size based on screen width
+  const responsiveFontSize = size.width > 780 ? 2.2 : 1; // Adjust the font size based on screen width
   const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }));
 
   useEffect(() => {
