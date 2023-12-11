@@ -3,19 +3,22 @@ import styled from "styled-components";
 import { FaWhatsapp } from "react-icons/fa";
 import { CiInstagram } from "react-icons/ci";
 import { CiLinkedin } from "react-icons/ci";
+import { AiFillSignal } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { FaHeadSideVirus } from "react-icons/fa";
+import { MdWork } from "react-icons/md";
 
 const Container = styled.div`
   position: fixed;
   bottom: 0;
   left: 0;
-  width: 95%;
+  width: 100%;
   display: flex;
   padding: 20px;
   justify-content: space-between;
   align-items: flex-end;
   flex-direction: row;
   z-index: 9999;
-
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
@@ -23,58 +26,77 @@ const Container = styled.div`
   }
 `;
 
-const ContainerLeft = styled.div({
-  color: 'white',
-  padding: '10px',
-  width: '100%',
-  backgroundColor: 'rgba(0, 0, 0, 0.3)',
-  boxShadow: '2px 2px 5px rgba(60, 50, 2, 0.2), -2px -2px 5px rgba(0, 0, 0, 1)', 
-  borderColor: 'transparent',
-  fontSize: '20px',
-  
-});
+const ContainerLeft = styled.div`
+  color: white;
+  padding: 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 5px rgba(60, 50, 2, 0.2), -2px -2px 5px rgba(0, 0, 0, 1);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
+  box-shadow: 3px 3px 5px rgba(255, 255, 255, 1);
+  box-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
+  box-shadow: 5px 5px 6px rgba(255, 255, 255, 1);
+  box-shadow: 6px 6px 5px rgba(0, 0, 0, 1);
+  box-shadow: 7px 7px 6px rgba(255, 255, 255, 1);
+  font-size: 20px;
+  @media (max-width: 768px) {
+      width: 100%;
+  }
+`;
 
-const ContainerRight = styled.div({
-  color: 'white',
-  display: "flex",
-  justifyContent: 'center',
-  flexDirection: 'column',
-  width: "100%"
-});
+const ContainerRight = styled.div`
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  @media (max-width: 768px) {
+    color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: row; 
+  width: 100%;
+  }
+`;
 
-
-const ContainerIcons = styled.button({
-  padding:"10px",
-  width: "100%",
-  fontSize: "24px",
-  background: "transparent",
-  color: "white",
-  border:"none",
-});
+const ContainerIcons = styled.button`
+  padding: 10px;
+  width: 100%;
+  font-size: 24px;
+  background: transparent;
+  color: white;
+  border: none;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: row; 
+  }
+`;
 
 const ClickableIcon = styled.a`
   color: white;
   text-decoration: none;
   &:hover {
-    color: #CCCCCC; 
+    color: #cccccc;
+  }
 `;
-
 
 const ClickableIcon1 = styled.a`
   color: white;
   text-decoration: none;
   &:hover {
-    color: #CCCCCC; 
+    color: #cccccc;
+  }
 `;
 
-const Paragrafo = styled.div({
-  fontSize: "15px",
-  padding: "10px"
-})
+const Paragrafo = styled.div`
+  font-size: 15px;
+  padding: 10px;
+`;
 
-const ContainerTitulo = styled.div({
-  padding: '10px'
-})
+const ContainerTitulo = styled.div`
+  padding: 10px;
+`;
+
 
 
 const Footer = () => {
@@ -82,15 +104,18 @@ const Footer = () => {
     <>
       <Container>
       <ContainerLeft>
-        <ContainerTitulo><ClickableIcon1>Dev</ClickableIcon1></ContainerTitulo>
+        <ContainerTitulo><ClickableIcon1>Dev <FaHeadSideVirus />
+        </ClickableIcon1></ContainerTitulo>
           <Paragrafo>Você Dev que deseja se aprofuncar no mundo linux e rust </Paragrafo>
         </ContainerLeft>
         <ContainerLeft>
-        <ContainerTitulo><ClickableIcon1>Clientes</ClickableIcon1></ContainerTitulo>
+        <ContainerTitulo><ClickableIcon1>Clientes  <AiFillSignal />
+        </ClickableIcon1></ContainerTitulo>
           <Paragrafo> Você deseja fazer um site ou um aplicativo click no icon a cima</Paragrafo>
         </ContainerLeft>
         <ContainerLeft>
-        <ContainerTitulo><ClickableIcon1>Recrutores</ClickableIcon1></ContainerTitulo>
+        <ContainerTitulo><ClickableIcon1>Recrutores  <MdWork />
+        </ClickableIcon1></ContainerTitulo>
         <Paragrafo> Para você Recrutadores que deseja ver meus projetos e minhas certificações</Paragrafo>
         </ContainerLeft>
         <ContainerRight>
@@ -107,6 +132,11 @@ const Footer = () => {
           <ContainerIcons>
             <ClickableIcon href="https://www.linkedin.com/in/kau%C3%A3-marques-8896b4249/">
               <CiLinkedin />
+            </ClickableIcon>
+          </ContainerIcons>
+          <ContainerIcons>
+            <ClickableIcon href="https://github.com/karasucyber/Aquillae777">
+            <AiFillGithub />
             </ClickableIcon>
           </ContainerIcons>
         </ContainerRight>
