@@ -13,7 +13,7 @@ export default function Cinema() {
       <fog attach="fog" args={['black', 15, 20]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
-          <Corvo rotation={[0, Math.PI -3.6, 0]} position={[-0.1, 0, 1]} scale={[0.1, 0.080, 0.1]} />
+          <Corvo rotation={[0, Math.PI -3, 0]} position={[-0.1, 0, 1]} scale={[0.1, 0.080, 0.1]} />
           <VideoText position={[0, 1.3, -2]} />
           <Ground/>
         </group>
