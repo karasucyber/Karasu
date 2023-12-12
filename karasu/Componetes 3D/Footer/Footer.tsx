@@ -30,7 +30,7 @@ const ContainerLeft = styled.div`
   color: white;
   padding: 10px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.90);
   box-shadow: 2px 2px 5px rgba(60, 50, 2, 0.2), -2px -2px 5px rgba(0, 0, 0, 1);
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
   box-shadow: 3px 3px 5px rgba(255, 255, 255, 1);
@@ -39,8 +39,12 @@ const ContainerLeft = styled.div`
   box-shadow: 6px 6px 5px rgba(0, 0, 0, 1);
   box-shadow: 7px 7px 6px rgba(255, 255, 255, 1);
   font-size: 20px;
+  margin-right: 30px; // Adicione esta linha para espaçamento à direita
+
   @media (max-width: 768px) {
       width: 100%;
+      margin: 20px;
+
   }
 `;
 
@@ -69,6 +73,7 @@ const ContainerIcons = styled.button`
   @media (max-width: 768px) {
     display: flex;
     flex-direction: row; 
+    padding: 10px;
   }
 `;
 
@@ -103,43 +108,54 @@ const Footer = () => {
   return (
     <>
       <Container>
+
       <ContainerLeft>
+      
         <ContainerTitulo><ClickableIcon1>Dev <FaHeadSideVirus />
         </ClickableIcon1></ContainerTitulo>
           <Paragrafo>Você Dev que deseja se aprofuncar no mundo linux e rust </Paragrafo>
         </ContainerLeft>
+
         <ContainerLeft>
         <ContainerTitulo><ClickableIcon1>Clientes  <AiFillSignal />
         </ClickableIcon1></ContainerTitulo>
           <Paragrafo> Você deseja fazer um site ou um aplicativo click no icon a cima</Paragrafo>
         </ContainerLeft>
+
         <ContainerLeft>
         <ContainerTitulo><ClickableIcon1>Recrutores  <MdWork />
         </ClickableIcon1></ContainerTitulo>
         <Paragrafo> Para você Recrutadores que deseja ver meus projetos e minhas certificações</Paragrafo>
         </ContainerLeft>
+
         <ContainerRight>
+
           <ContainerIcons>
             <ClickableIcon href="https://www.instagram.com/karasucyber/">
               <CiInstagram />
             </ClickableIcon>
           </ContainerIcons>
+
           <ContainerIcons>
             <ClickableIcon href="https://api.whatsapp.com/send?phone=+55+5511919216813&text=Ol%C3%A1%2C+estou+vindo+porqu%C3%AA+o+corvo+disse....">
               <FaWhatsapp />
             </ClickableIcon>
           </ContainerIcons>
+
           <ContainerIcons>
             <ClickableIcon href="https://www.linkedin.com/in/kau%C3%A3-marques-8896b4249/">
               <CiLinkedin />
             </ClickableIcon>
           </ContainerIcons>
+
           <ContainerIcons>
             <ClickableIcon href="https://github.com/karasucyber/Aquillae777">
             <AiFillGithub />
             </ClickableIcon>
           </ContainerIcons>
+          
         </ContainerRight>
+
       </Container>
     </>
   );
