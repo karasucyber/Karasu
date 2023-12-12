@@ -30,14 +30,8 @@ const ContainerLeft = styled.div`
   color: white;
   padding: 10px;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.90);
-  box-shadow: 2px 2px 5px rgba(60, 50, 2, 0.2), -2px -2px 5px rgba(0, 0, 0, 1);
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 1);
-  box-shadow: 3px 3px 5px rgba(255, 255, 255, 1);
-  box-shadow: 4px 4px 5px rgba(0, 0, 0, 1);
+  background-color: rgba(0, 0, 0, 0.80); 
   box-shadow: 5px 5px 6px rgba(255, 255, 255, 1);
-  box-shadow: 6px 6px 5px rgba(0, 0, 0, 1);
-  box-shadow: 7px 7px 6px rgba(255, 255, 255, 1);
   font-size: 20px;
   margin-right: 30px; // Adicione esta linha para espaçamento à direita
 
