@@ -96,34 +96,30 @@ const ContainerTitulo = styled.div`
   padding: 10px;
 `;
 
-
+/*<ContainerLeft>
+  <ContainerTitulo><ClickableIcon1>Dev <FaHeadSideVirus />
+  </ClickableIcon1></ContainerTitulo>
+  <Paragrafo>Você Dev que deseja se aprofuncar no mundo linux e rust </Paragrafo>
+  </ContainerLeft>
+*/
 
 const Footer = () => {
   return (
     <>
       <Container>
-
-      <ContainerLeft>
-      
-        <ContainerTitulo><ClickableIcon1>Dev <FaHeadSideVirus />
-        </ClickableIcon1></ContainerTitulo>
-          <Paragrafo>Você Dev que deseja se aprofuncar no mundo linux e rust </Paragrafo>
-        </ContainerLeft>
-
         <ContainerLeft>
-        <ContainerTitulo><ClickableIcon1>Clientes  <AiFillSignal />
+        <ContainerTitulo><ClickableIcon1 href="https://karasucorp.com/">Clientes <AiFillSignal />
         </ClickableIcon1></ContainerTitulo>
           <Paragrafo> Você deseja fazer um site ou um aplicativo click no icon a cima</Paragrafo>
         </ContainerLeft>
 
         <ContainerLeft>
-        <ContainerTitulo><ClickableIcon1>Recrutores  <MdWork />
+        <ContainerTitulo><ClickableIcon1 href="/Recrutadores">Recrutores <MdWork />
         </ClickableIcon1></ContainerTitulo>
         <Paragrafo> Para você Recrutadores que deseja ver meus projetos e minhas certificações</Paragrafo>
         </ContainerLeft>
 
         <ContainerRight>
-
           <ContainerIcons>
             <ClickableIcon href="https://www.instagram.com/karasucyber/">
               <CiInstagram />
@@ -147,7 +143,6 @@ const Footer = () => {
             <AiFillGithub />
             </ClickableIcon>
           </ContainerIcons>
-          
         </ContainerRight>
 
       </Container>
