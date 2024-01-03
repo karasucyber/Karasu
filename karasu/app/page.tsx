@@ -17,12 +17,12 @@ const Container1 = styled.body({
 export default function Home() {
   return (
    
-   <Container1> 
-    <Container>
+   <> 
     <Cinema/>
    <Footer/>
-    </Container>
-   </Container1>
+    
+   </>
+   
  
   )
 }
