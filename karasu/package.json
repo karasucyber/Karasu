@@ -14,7 +14,7 @@
     "@types/three": "^0.158.1",
     "framer-motion": "^10.16.5",
     "i-": "^1.1.5",
-    "next": "^14.0.3",
+    "next": "^14.0.4",
     "popmotion": "^11.0.5",
     "react": "^18",
     "react-dom": "^18",
