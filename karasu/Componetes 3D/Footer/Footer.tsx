@@ -24,8 +24,8 @@ const Container = styled.div`
     flex-direction: column;
     align-items: center;
     text-align: center;
-    width: 100%;
-    height:50%
+    width: 90%;
+    height:60%
 
   }
 `;
