@@ -4,6 +4,7 @@ import Footer from '@/Componetes 3D/Footer/Footer';
 export default function Home() {
   return (
    <>
+   <Cinema/>
    <Footer/>
    </>
   )
