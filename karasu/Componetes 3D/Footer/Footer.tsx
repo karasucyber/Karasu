@@ -110,13 +110,13 @@ const Footer = () => {
         <ContainerLeft>
         <ContainerTitulo><ClickableIcon1 href="https://karasucorp.com/">Clientes <AiFillSignal />
         </ClickableIcon1></ContainerTitulo>
-          <Paragrafo> Você deseja fazer um site ou um aplicativo click no icon a cima</Paragrafo>
+          <Paragrafo> Seja muito bem-vindo! Ao prosseguir, você será direcionado para o nosso site, onde encontrará informações detalhadas sobre nossos serviços, projetos e expertise.</Paragrafo>
         </ContainerLeft>
 
         <ContainerLeft>
         <ContainerTitulo><ClickableIcon1 href="/Recrutadores">Recrutores <MdWork />
         </ClickableIcon1></ContainerTitulo>
-        <Paragrafo> Para você Recrutadores que deseja ver meus projetos e minhas certificações</Paragrafo>
+        <Paragrafo>Apresento orgulhosamente minhas certificações e meu portfólio, evidenciando minha dedicação à excelência no mundo tecnológico. </Paragrafo>
         </ContainerLeft>
 
         <ContainerRight>
