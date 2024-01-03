@@ -19,6 +19,7 @@ const Container = styled.div`
   align-items: flex-end;
   flex-direction: row;
   z-index: 9999;
+  
   @media (max-width: 768px) {
     flex-direction: column;
     align-items: center;
