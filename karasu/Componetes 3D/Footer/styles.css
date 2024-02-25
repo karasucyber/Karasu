@@ -1,55 +1,93 @@
 .container {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    padding: 20px;
-    justify-content: space-between;
-    align-items: flex-end;
-    flex-direction: row;
-    z-index: 9999;
-  }
-  .container-left {
-    color: white;
-    padding: 10px;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.80); 
-    box-shadow: 5px 5px 6px rgba(255, 255, 255, 1);
-    font-size: 20px;
-    margin-right: 30px;
-  }
-  .container-left a {
-    color: white;
-    text-decoration: none;
-  }
-  .container-titulo {
-    padding: 10px;
-  }
-  .paragrafo {
-    font-size: 15px;
-    padding: 10px;
-  }
-  .container-right {
-    color: white;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    width: 100%;
-  }
-  .container-icons {
-    padding: 10px;
-    width: 100%;
-    font-size: 24px;
-    background: transparent;
-    color: white;
-    border: none;
-  }
-  .container-icons a {
-    color: white;
-    text-decoration: none;
-  }
-  .container-icons:hover a {
-    color: #cccccc;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  padding: 20px;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column; /* Alterado para coluna em telas pequenas */
+  z-index: 9999;
+}
+
+.container-left {
+  padding: 10px;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.80);
+  box-shadow: 5px 5px 6px rgba(255, 255, 255, 1);
+  font-size: 20px;
+  margin: 20px; 
+}
+
+
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.container-left a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  animation: blink 2s infinite; /* 2s é a duração da animação, você pode ajustar conforme necessário */
+}
+
+.container-left a:hover {
+  animation-play-state: paused; /* Pausa a animação quando o mouse estiver sobre o link */
+}
+.container-titulo {
+  padding: 10px;
+}
+
+.paragrafo {
+  font-size: 20px;
+  padding: 10px;
+}
+
+.container-right {
+  color: white;
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+
+.container-icons {
+  padding: 10px;
+  width: 100%;
+  font-size: 30px;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+.container-icons a {
+  color: white;
+  text-decoration: none;
+}
+
+.container-icons:hover a {
+  color: #cccccc;
+}
+
+@media only screen and (min-width: 768px) {
+  /* Adicione as regras de estilo específicas para telas maiores aqui */
+  .container {
+    flex-direction: row; /* Voltando para linha em telas maiores */
   }
   
+  .container-left {
+    margin-bottom: 0; /* Removendo espaçamento inferior */
+  }
+
+  .container-right{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;  
+    flex-direction: none;
+  }
+}
+
+

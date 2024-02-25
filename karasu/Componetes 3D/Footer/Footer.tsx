@@ -25,13 +25,15 @@ const Footer = () => {
     <>
   <div className="container">
     <div className="container-left">
-      <div className="container-titulo"><a href="https://karasucorp.com/">Clientes <i className="fa fa-signal"></i></a></div>
+      <div className="container-titulo"><a href="https://www.instagram.com/karasu_corp/">Clientes  <AiFillSignal/> </a></div>
       <div className="paragrafo">Seja muito bem-vindo! Ao prosseguir, você será direcionado para o nosso site, onde encontrará informações detalhadas sobre nossos serviços, projetos e expertise.</div>
     </div>
+
     <div className="container-left">
-      <div className="container-titulo"><a href="/Recrutadores">Recrutores <i className="fa fa-work"></i></a></div>
+      <div className="container-titulo"><a  href="/Recrutadores">Recrutores <MdWork/> </a></div>
       <div className="paragrafo">Apresento orgulhosamente minhas certificações e meu portfólio, evidenciando minha dedicação à excelência no mundo tecnológico.</div>
     </div>
+
     <div className="container-right">
       <button className="container-icons"><a href="https://www.instagram.com/karasu_eng/"> <CiInstagram/></a></button>
       <button className="container-icons"><a href="https://api.whatsapp.com/send?phone=+55+5511919216813&text=Ol%C3%A1%2C+estou+vindo+porqu%C3%AA+o+corvo+disse...."><FaWhatsapp/></a></button>
