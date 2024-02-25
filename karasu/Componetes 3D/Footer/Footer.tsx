@@ -121,7 +121,7 @@ const Footer = () => {
 
         <ContainerRight>
           <ContainerIcons>
-            <ClickableIcon href="https://www.instagram.com/karasucyber/">
+            <ClickableIcon href="https://www.instagram.com/karasu_eng/">
               <CiInstagram />
             </ClickableIcon>
           </ContainerIcons>
