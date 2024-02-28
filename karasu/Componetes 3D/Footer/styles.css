@@ -7,8 +7,6 @@
   padding: 20px;
   justify-content: space-between;
   align-items: flex-end;
-  flex-direction: column; /* Alterado para coluna em telas pequenas */
-  z-index: 9999;
 }
 
 .container-left {
@@ -49,8 +47,8 @@
 .container-right {
   color: white;
   display: flex;
-  justify-content: center;
-  width: 100%;
+  flex-direction: column;
+  width: 10%;
 }
 
 .container-icons {
@@ -71,10 +69,9 @@
   color: #cccccc;
 }
 
-@media only screen and (min-width: 768px) {
-  /* Adicione as regras de estilo específicas para telas maiores aqui */
+@media only screen and (max-width: 768px) {
   .container {
-    flex-direction: center; /* Voltando para linha em telas maiores */
+    flex-direction: column; 
   }
   
   .container-left {
@@ -84,9 +81,8 @@
   .container-right{
     color: white;
     display: flex;
-    flex-direction: column;
-    width: 100%;  
     flex-direction: none;
+    width: 100%;  
   }
 }
 
