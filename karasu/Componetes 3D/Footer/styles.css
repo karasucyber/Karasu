@@ -35,6 +35,8 @@
   .ContainerLeft {
     width: 100%;
     margin: 10px;
+    height: 130px;
+
   }
 }
 
@@ -89,7 +91,15 @@
 .Paragrafo {
   font-size: 20px;
   padding: 10px;
+  
 }
+@media (max-width: 768px) {
+  .Paragrafo {
+    font-size: 15px;
+    padding: 10px;
+  }
+}
+
 
 /* ContainerTitulo */
 .ContainerTitulo {
