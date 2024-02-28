@@ -31,7 +31,7 @@ function Corvo(props:any) {
 
 function VideoText(props: any) {
   const { size } = useThree(); 
-  const responsiveFontSize = size.width > 780 ? 2.5 : 0.99; 
+  const responsiveFontSize = size.width > 780 ? 2.5 : 0.50; 
   const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }));
 
   useEffect(() => {
