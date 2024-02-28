@@ -1,4 +1,5 @@
-.container {
+/* Container */
+.Container {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -7,17 +8,93 @@
   padding: 20px;
   justify-content: space-between;
   align-items: flex-end;
+  flex-direction: row;
+  z-index: 9999;
 }
 
-.container-left {
+@media (max-width: 768px) {
+  .Container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+}
+
+/* ContainerLeft */
+.ContainerLeft {
+  color: white;
   padding: 10px;
   width: 100%;
   background-color: rgba(0, 0, 0, 0.80);
   box-shadow: 5px 5px 6px rgba(255, 255, 255, 1);
   font-size: 20px;
-  margin: 20px; 
+  margin-right: 30px;
 }
 
+@media (max-width: 768px) {
+  .ContainerLeft {
+    width: 100%;
+    margin: 10px;
+  }
+}
+
+/* ContainerRight */
+.ContainerRight {
+  color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .ContainerRight {
+    color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: 100%;
+  }
+}
+
+/* ContainerIcons */
+.ContainerIcons {
+  padding: 10px;
+  width: 100%;
+  font-size: 24px;
+  background: transparent;
+  color: white;
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .ContainerIcons {
+    display: flex;
+    flex-direction: row;
+    padding: 10px;
+  }
+}
+
+/* ClickableIcon */
+.ClickableIcon {
+  color: white;
+  text-decoration: none;
+}
+
+.ClickableIcon:hover {
+  color: #cccccc;
+}
+
+/* Paragrafo */
+.Paragrafo {
+  font-size: 20px;
+  padding: 10px;
+}
+
+/* ContainerTitulo */
+.ContainerTitulo {
+  padding: 10px;
+}
 
 
 @keyframes blink {
@@ -26,64 +103,6 @@
   100% { opacity: 1; }
 }
 
-.container-left a {
-  color: rgb(255, 255, 255);
-  text-decoration: none;
-  animation: blink 2s infinite; /* 2s é a duração da animação, você pode ajustar conforme necessário */
+.ClickableIcon1 {
+  animation: blink 3s infinite;
 }
-
-.container-left a:hover {
-  animation-play-state: paused; /* Pausa a animação quando o mouse estiver sobre o link */
-}
-.container-titulo {
-  padding: 10px;
-}
-
-.paragrafo {
-  font-size: 20px;
-  padding: 10px;
-}
-
-.container-right {
-  color: white;
-  display: flex;
-  flex-direction: column;
-  width: 10%;
-}
-
-.container-icons {
-  padding: 10px;
-  width: 100%;
-  font-size: 30px;
-  background: transparent;
-  color: white;
-  border: none;
-}
-
-.container-icons a {
-  color: white;
-  text-decoration: none;
-}
-
-.container-icons:hover a {
-  color: #cccccc;
-}
-
-@media only screen and (max-width: 768px) {
-  .container {
-    flex-direction: column; 
-  }
-  
-  .container-left {
-    margin-bottom: 0; /* Removendo espaçamento inferior */
-  }
-
-  .container-right{
-    color: white;
-    display: flex;
-    flex-direction: none;
-    width: 100%;  
-  }
-}
-
-

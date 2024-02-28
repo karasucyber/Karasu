@@ -10,7 +10,7 @@ export default function Cinema() {
   return (
     <Canvas  gl={{ alpha: false }} camera={{ position: [0, 3, 100], fov: 15 }}>
       <color attach="background" args={['black']} />
-      <fog attach="fog" args={['#292929', 15, 25]} />
+      <fog attach="fog" args={['black', 15, 25]} />
       <Suspense fallback={null}>
         <group position={[0, -1, 0]}>
           <Corvo rotation={[0, Math.PI -3, 0]} position={[-0.1, 0, 1]} scale={[0.1, 0.080, 0.1]} />
