@@ -50,7 +50,7 @@
   color: white;
   display: flex;
   justify-content: center;
-  width: 10%;
+  width: 100%;
 }
 
 .container-icons {
@@ -74,7 +74,7 @@
 @media only screen and (min-width: 768px) {
   /* Adicione as regras de estilo específicas para telas maiores aqui */
   .container {
-    flex-direction: row; /* Voltando para linha em telas maiores */
+    flex-direction: center; /* Voltando para linha em telas maiores */
   }
   
   .container-left {
