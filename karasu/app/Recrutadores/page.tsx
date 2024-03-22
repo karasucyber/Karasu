@@ -1,39 +1,55 @@
 'use client'
-import React from "react";
-import "./styles.css"
+import "./styles.css";
+import React, { useRef, useState } from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import './styles.css';
+import { AiOutlineCaretLeft } from "react-icons/ai";
+
+import { EffectCards } from 'swiper/modules';
+
+
 
 export default function Recrutadores() {
     return (
         <>
             <div className="Container">
-            <h1> Meus Projetos</h1>
+                <h1 className="Titulo"> Portifolio </h1>
 
-                <div className="Box">
-                    <p className="">  Muito prazer sou conhecido como Karasu(Corvo em japonês) eu desenvolvedor á dois anos atuando principalmente em desenvolvimento web,
-                        sou especislista em desenvolvimento de sites com objetos 3D trazendo inovação e credibilidade para seu site, á baixo você pode ver sites feitos por mim, entre outros Projetos
-                        que o foco era a funcionalidade e não o visual. Aqui temos, Projetos WebSite, mobile, microServiços entre outros.
-                    </p>
+                <div className="ContainerCard">
+                    <h1 className="Titulo"> WebSites </h1>
+                    <Swiper effect={'cards'} grabCursor={true} modules={[EffectCards]} className="mySwiper">
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                    </Swiper>
                 </div>
-                <h1> WebSites</h1>
-                <div className="Box1">
 
-                 <div className="Card"> 
-                 <h2> Home Fight</h2>
-                    <div>
-                         <div className="ContainerImg">
-                            <img className="Img" src="Captura de tela de 2023-11-06 21-05-05.png"/>
-                         </div>
-                      <h2> Descrição</h2>
-                      <p> aqui .....</p>
-                    </div>
-                    </div>
-
-
-
-
+                <div className="ContainerCard">
+                    <h1 className="Titulo"> Back-End </h1>
+                    <Swiper effect={'cards'} grabCursor={true} modules={[EffectCards]} className="mySwiper">
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                        <SwiperSlide></SwiperSlide>
+                    </Swiper>
+                </div>
+                <div className="Seta">
+                    <AiOutlineCaretLeft style={{ height: "100px", width: "200px", color: "white" }} />
                 </div>
             </div>
         </>
-
     )
 }

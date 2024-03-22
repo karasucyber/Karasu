@@ -37,10 +37,10 @@ const Footer = () => {
     </div>
     <div className="Paragrafo">Apresento orgulhosamente minhas certificações e meu portfólio, evidenciando minha dedicação à excelência no mundo tecnológico.</div>
   </div>
-
+    
   <div className="ContainerRight">
     <button className="ContainerIcons">
-      <a href="https://www.instagram.com/karasucyber/" className="ClickableIcon"> <CiInstagram></CiInstagram></a>
+      <a href="https://www.instagram.com/karasu_eng/" className="ClickableIcon"> <CiInstagram></CiInstagram></a>
     </button>
     <button className="ContainerIcons">
       <a href="https://api.whatsapp.com/send?phone=+55+5511919216813&text=Ol%C3%A1%2C+estou+vindo+porqu%C3%AA+o+corvo+disse...." className="ClickableIcon"> <FaWhatsapp></FaWhatsapp></a>
@@ -58,3 +58,4 @@ const Footer = () => {
 };
 
 export default Footer;
+  
