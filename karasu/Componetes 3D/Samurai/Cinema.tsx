@@ -29,21 +29,34 @@ function Corvo(props:any) {
   const { scene } = useGLTF('/corvo.gltf')
   return <primitive object={scene} map={colotTexture} {...props} />}
 
-function VideoText(props: any) {
-  const { size } = useThree(); 
-  const responsiveFontSize = size.width > 780 ? 2.5 : 0.50; 
-  const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }));
-
-  useEffect(() => {
-    void video.play();
-  }, [video]);
-  return (
-    <Text font="/Inter-Bold.woff" fontSize={responsiveFontSize} letterSpacing={-0.06} {...props}>
-      Karasu
-      <meshBasicMaterial toneMapped={false}>
-        <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
-      </meshBasicMaterial>
-    </Text>);}
+  function VideoText(props:any) {
+    const { size } = useThree();
+    const responsiveFontSize = size.width > 780 ? 2.5 : 0.5;
+    const [video] = useState(() => {
+      const vid = document.createElement('video');
+      vid.src = '/intro.mp4';
+      vid.crossOrigin = 'anonymous';
+      vid.loop = true;
+      vid.muted = true;
+      return vid;
+    });
+  
+    useEffect(() => {
+      const playPromise = video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => console.error('Error playing video:', error));
+      }
+    }, [video]);
+  
+    return (
+      <Text {...props} color="white" font="/Inter-Bold.woff" fontSize={responsiveFontSize} letterSpacing={-0.1}>
+        KARASU
+        <meshBasicMaterial toneMapped={false}>
+          <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
+        </meshBasicMaterial>
+      </Text>
+    );
+  }
     
 function Ground() {
   const [floor, normal] = useTexture(['/LowSet1_baseColor.png', '/LowSet1_baseColor.png']);
