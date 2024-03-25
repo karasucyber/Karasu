@@ -23,22 +23,35 @@ export default function Cinema() {
     </Canvas>)}
 
 
-function VideoText(props: any) {
-  const { size } = useThree(); 
-  const responsiveFontSize = size.width > 780 ? 3 : 0.50; 
-  const [video] = useState(() => Object.assign(document.createElement('video'), { src: '/intro.mp4', crossOrigin: 'Anonymous', loop: true, muted: true }));
+function VideoText(props:any) {
+  const { size } = useThree();
+  const responsiveFontSize = size.width > 780 ? 3 : 0.5;
+  const [video] = useState(() => {
+    const vid = document.createElement('video');
+    vid.src = '/intro.mp4';
+    vid.crossOrigin = 'anonymous';
+    vid.loop = true;
+    vid.muted = true;
+    return vid;
+  });
 
   useEffect(() => {
-    void video.play();
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(error => console.error('Error playing video:', error));
+    }
   }, [video]);
-  
+
   return (
-    <Text font="/Inter-Bold.woff" fontSize={responsiveFontSize} letterSpacing={-0.10} {...props}>
+    <Text {...props} color="white" font="/Inter-Bold.woff" fontSize={responsiveFontSize} letterSpacing={-0.1}>
       Projetos
       <meshBasicMaterial toneMapped={false}>
         <videoTexture attach="map" args={[video]} encoding={THREE.sRGBEncoding} />
       </meshBasicMaterial>
-    </Text>);}
+    </Text>
+  );
+}
+
     
 function Ground() {
   const [floor, normal] = useTexture(['/LowSet1_baseColor.png', '/LowSet1_baseColor.png']);
