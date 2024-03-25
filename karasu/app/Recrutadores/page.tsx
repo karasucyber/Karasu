@@ -15,9 +15,6 @@ import Cinema2 from "@/Componetes 3D/Samurai/Cinema2";
 export default function Recrutadores() {
     return (
         <>
-            <div style={{ width: "100%", height:" 400px" }} >
-                  <Cinema2/>
-            </div>
             <div className="Container">
                 <div className="ContainerCard">
                     <h1 className="Titulo"> WebSites </h1>
