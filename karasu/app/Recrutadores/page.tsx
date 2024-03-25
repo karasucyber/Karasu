@@ -51,6 +51,24 @@ export default function Recrutadores() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slide-content">
+                                <img src="10.png" alt="Imagem 1" />
+                                <div className="button-container">
+                                    <button  className="button-below"> 
+                                    <a href="https://www.salvatysocorrista.com.br/">Projeto</a></button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="slide-content">
+                                <img src="11.png" alt="Imagem 1" />
+                                <div className="button-container">
+                                    <button  className="button-below"> 
+                                    <a href="https://www.karasucorp.com/">Projeto</a></button>
+                                </div>
+                            </div>
+                        </SwiperSlide>
+                        <SwiperSlide>
+                            <div className="slide-content">
                                 <img src="01.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
