@@ -24,7 +24,7 @@ export default function Recrutadores() {
                     <Swiper effect={'cards'} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                         <SwiperSlide>
                             <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="09.jpg" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://www.agencier.com.br/">Projeto</a></button>
@@ -33,7 +33,7 @@ export default function Recrutadores() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="08.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://www.semlimitesed.tech/">Projeto</a></button>
@@ -42,7 +42,7 @@ export default function Recrutadores() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="01.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://clientenaopagante.vercel.app/">Projeto</a></button>
@@ -51,7 +51,7 @@ export default function Recrutadores() {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="01.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://home-fight.vercel.app/">Projeto</a></button>
@@ -60,7 +60,7 @@ export default function Recrutadores() {
                         </SwiperSlide>  
                         <SwiperSlide>
                             <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="02.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://my-house-777-2nbp.vercel.app/">Projeto</a></button>
@@ -75,7 +75,7 @@ export default function Recrutadores() {
                     <Swiper effect={'cards'} grabCursor={true} modules={[EffectCards]} className="mySwiper">
                         <SwiperSlide>
                         <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="03.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://in8teste1.vercel.app/">Projeto</a></button>
@@ -84,7 +84,7 @@ export default function Recrutadores() {
                         </SwiperSlide>
                         <SwiperSlide>
                         <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="05.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://bibliotecanucleo.vercel.app/">Projeto</a></button>
@@ -93,25 +93,7 @@ export default function Recrutadores() {
                         </SwiperSlide>
                         <SwiperSlide>
                         <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
-                                <div className="button-container">
-                                    <button  className="button-below"> 
-                                    <a href="https://bibliotecanucleo.vercel.app/">Projeto</a></button>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
-                                <div className="button-container">
-                                    <button  className="button-below"> 
-                                    <a href="https://github.com/karasucyber/Cadastro_J">Projeto</a></button>
-                                </div>
-                            </div>
-                        </SwiperSlide>
-                        <SwiperSlide>
-                        <div className="slide-content">
-                                <img src="Captura de tela de 2023-11-06 21-05-05.png" alt="Imagem 1" />
+                                <img src="06.png" alt="Imagem 1" />
                                 <div className="button-container">
                                     <button  className="button-below"> 
                                     <a href="https://tarefa-2-estacio.vercel.app/procedimento%201/index2.html">Projeto</a></button>
