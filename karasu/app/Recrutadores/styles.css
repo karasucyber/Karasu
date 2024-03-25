@@ -89,7 +89,22 @@ html, body {
 }
 
 .button-below {
+  color: white; /* Define o texto como branco */
+  padding: 10px 20px; /* Adiciona espaço interno ao redor do texto */
+  border: none; /* Remove a borda */
+  border-radius: 5px; /* Adiciona arredondamento às bordas */
+  cursor: pointer; /* Altera o cursor ao passar por cima */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
+  transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
+  text-decoration: none;
 }
+
+.button-below:hover {
+  text-decoration: none;
+  background-color: white; /* Altera a cor de fundo ao passar o mouse */
+  color: black; 
+}
+
 .swiper-slide:nth-child(1n) {
   background-color: rgb(255, 255, 255);
 }
