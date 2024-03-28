@@ -10,37 +10,20 @@ const Loader = styled.div`
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(255, 255, 255, 0.8); /* cor do fundo com opacidade */
+  background-color: black; 
   display: flex;
   justify-content: center;
-  align-items: center;
-  z-index: 9999; /* garante que o loader esteja na parte superior */
-`;
+  align-items: center;  
+  z-index: 9999; 
+  `;
 
 export default function Home() {
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    // Simula um tempo de carregamento para efeitos de demonstração
-    const timeout = setTimeout(() => {
-      setLoading(false);
-    }, 5000); // tempo de 2 segundos, ajuste conforme necessário
-
-    return () => clearTimeout(timeout);
-  }, []);
-
+  const [loading,setLoading] = useState(true);
+  useEffect(() => {const timeout = setTimeout(() => {setLoading(false);},4000); return () => clearTimeout(timeout);}, []);
   return (
     <>
       {loading ? (
         <Loader>
-          <p>Carregando...</p>
+          <p>Carregando....</p>
         </Loader>
-      ) : (
-        <>
-          <Cinema />
-          <Footer />
-        </>
-      )}
-    </>
-  );
-}
+      ) : (<><Cinema /><Footer /></>)}</>);}

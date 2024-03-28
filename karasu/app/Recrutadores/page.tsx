@@ -14,7 +14,7 @@ import Cinema2 from "@/Componetes 3D/Samurai/Cinema2";
 
 export default function Recrutadores() {
     return (
-        <>
+        <> 
             <div className="Container">
                 <div className="ContainerCard">
                     <h1 className="Titulo"> WebSites </h1>
@@ -84,7 +84,6 @@ export default function Recrutadores() {
                         </SwiperSlide>  
                     </Swiper>
                 </div>
-
                 <div className="ContainerCard">
                     <h1 className="Titulo"> Back-End </h1>
                     <Swiper effect={'cards'} grabCursor={true} modules={[EffectCards]} className="mySwiper">
@@ -124,9 +123,7 @@ export default function Recrutadores() {
                         </a>
                     </button>
                 </div>
-
             </div>
-
         </>
     )
 }

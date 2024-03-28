@@ -22,13 +22,12 @@ export default function Cinema() {
         <directionalLight position={[60, 100, -40]} intensity={0.4} />
         <Intro />
       </Suspense>
-    </Canvas>)}
-
+    </Canvas>
+    )}
 function Corvo(props:any) {
   const colotTexture = useTexture('/MAT_Crow_baseColor.png')
   const { scene } = useGLTF('/corvo.gltf')
   return <primitive object={scene} map={colotTexture} {...props} />}
-
   function VideoText(props:any) {
     const { size } = useThree();
     const responsiveFontSize = size.width > 780 ? 2.5 : 0.5;
@@ -40,14 +39,12 @@ function Corvo(props:any) {
       vid.muted = true;
       return vid;
     });
-  
     useEffect(() => {
       const playPromise = video.play();
       if (playPromise !== undefined) {
         playPromise.catch(error => console.error('Error playing video:', error));
       }
     }, [video]);
-  
     return (
       <Text {...props} color="white" font="/Inter-Bold.woff" fontSize={responsiveFontSize} letterSpacing={-0.1}>
         KARASU
@@ -57,7 +54,6 @@ function Corvo(props:any) {
       </Text>
     );
   }
-    
 function Ground() {
   const [floor, normal] = useTexture(['/LowSet1_baseColor.png', '/LowSet1_baseColor.png']);
   return (
@@ -69,7 +65,6 @@ function Ground() {
       mixBlur={6}
       mixStrength={1.5}
       rotation={[-Math.PI / 2, 0, Math.PI / 2]}>
-        
       {(Material: React.ElementType, props: any) => (
         <Material
           color="#a0a0a0"

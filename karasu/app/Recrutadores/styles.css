@@ -20,7 +20,6 @@ html, body {
   width: 100%;
   justify-content: flex-start;
   margin: 0px;
-
 }
 
 .Titulo{
@@ -51,12 +50,10 @@ html, body {
   border-radius: 50px;
 }
 
-
 .ContainerCard{
   flex-direction: column;
   align-items: center;
 }
-
 
 .slide-content {
   display: flex;
@@ -89,21 +86,62 @@ html, body {
 }
 
 .button-below {
-  color: white; /* Define o texto como branco */
-  padding: 10px 20px; /* Adiciona espaço interno ao redor do texto */
-  border: none; /* Remove a borda */
-  border-radius: 5px; /* Adiciona arredondamento às bordas */
-  cursor: pointer; /* Altera o cursor ao passar por cima */
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra suave */
-  transition: background-color 0.3s, color 0.3s; /* Adiciona uma transição suave */
-  text-decoration: none;
+  color: white;
+  padding: 10px 20px; 
+  border: none; 
+  border-radius: 5px; 
+  cursor: pointer; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  transition: background-color 0.3s, color 0.3s;  
+   text-decoration: none;
 }
 
 .button-below:hover {
   text-decoration: none;
-  background-color: white; /* Altera a cor de fundo ao passar o mouse */
+  background-color: white; 
   color: black; 
 }
+
+
+.fullscreen {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 1s;
+  z-index: -1;
+}
+
+.bg {
+  background: #101010;
+}
+
+.fullscreen.notready {
+  color: #606060;
+}
+
+
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+canvas {
+  opacity: 0;
+  touch-action: none;
+  animation: fade-in 2s ease 0.5s forwards;
+}
+
+
+
 
 .swiper-slide:nth-child(1n) {
   background-color: rgb(255, 255, 255);
@@ -146,50 +184,3 @@ html, body {
 .swiper-slide:nth-child(10n) {
   background-color: rgb(255, 255, 255);
 }
-
-
-
-* {
-  box-sizing: border-box;
-}
-
-
-
-.fullscreen {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: all 1s;
-  z-index: -1;
-}
-
-.bg {
-  background: #101010;
-}
-
-.fullscreen.notready {
-  color: #606060;
-}
-
-
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-canvas {
-  opacity: 0;
-  touch-action: none;
-  animation: fade-in 2s ease 0.5s forwards;
-}
-
-
