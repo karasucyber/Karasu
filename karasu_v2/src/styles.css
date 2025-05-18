@@ -12,6 +12,10 @@
     text-decoration: none;
     color: inherit;
   }
+
+  h1{
+   color: white;
+  }
   
   button, input, textarea, select {
     border: none;
@@ -27,7 +31,8 @@
   body {
     line-height: 1;
     background-color: #000000;
-    color: #000;
+    color: white;
+
   }
   
   blockquote, q {
